@@ -4,7 +4,7 @@
     position: relative;
     align-items: center;
     backdrop-filter: blur(1px);
-    background: rgba(0, 0, 0, 0.305);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5587185557816876) 100%);
  
     & ul{
         display: flex;

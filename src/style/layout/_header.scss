@@ -5,15 +5,30 @@
 .banner-infos-container{
     width: 40%;
     color: white;
-    height: 70%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 3rem;
+
+    & .btn-container{
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 .top-ten-container{
     display: flex;
     color: white;
-    height: 25%;
+    height: 29%;
     overflow: hidden;
+    position: relative;
+    padding: 2rem;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5587185557816876) 0%, rgba(255,255,255,0) 100%);
+    gap: 1rem;
+
+    & h2{
+        position: absolute;
+        top: -1rem;
+    }
 }

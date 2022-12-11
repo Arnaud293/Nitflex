@@ -45,11 +45,12 @@ const Header = () => {
                 </div>
             </div>
             <div className="top-ten-container">
+                <h2>Top 10 movies and TV Show :</h2>
                 {trendings
                 .sort((a,b) => b.vote_average - a.vote_average)
                 .slice(0,10)
-                .map((trending) => (
-                    <TopTenTrendings trending={trending} key={trending.id} />
+                .map((trending, index) => (
+                    <TopTenTrendings trending={trending} key={trending.id} index={index} />
                 ))}
             </div>
         </div>

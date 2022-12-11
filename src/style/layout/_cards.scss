@@ -2,13 +2,21 @@
     height: 100%;
     width: 100%;
     display: flex;
+    position: relative;
     & span{
         height: 100%;
         width: 120px;
+        color: black;
+        font-size: 280px;
+        font-weight: bold;
+        -webkit-text-stroke: 3px grey;
+        display: flex;
+        align-items: center;
     }
     & img{
-        height: 100%;
-        width: 120px;
+        height: 96%;
+        width: 150px;
+        border-radius: 0px 5px 5px 0px;
         object-fit: cover;
     }
 }
