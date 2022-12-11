@@ -7,6 +7,7 @@ const Nav = () => {
 
     const [toggleResponsiveNav, setToggleResponsiveNav] = useState(false);
     const [largeur, setLargeur] = useState(window.innerWidth);
+    const [searchBar, setSearchBar] = useState(false);
 
     useEffect(() => {
 
@@ -46,7 +47,14 @@ const Nav = () => {
                     <li className='responsive-list-item'>Ma liste</li>
                 </ul>
             )}
-            <i className="fa-solid fa-magnifying-glass"></i>
+            {searchBar === false ? (
+                <i className="fa-solid fa-magnifying-glass" onClick={() => setSearchBar(!searchBar)}></i>
+            ) : (
+                <div className='opened-search-bar'>
+                    <input type="text" placeholder='search here ...'/>
+                    <i className="fa-solid fa-magnifying-glass" onClick={() => setSearchBar(!searchBar)}></i>
+                </div>
+            )}
         </div>
     );
 };

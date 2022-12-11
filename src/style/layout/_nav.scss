@@ -2,6 +2,7 @@
     display: flex;
     color: $font1;
     position: relative;
+    align-items: center;
  
     & ul{
         display: flex;
@@ -15,13 +16,13 @@
         }
         & li{
             display: flex;
-            @media screen and(max-width: 500px){
+            @media screen and(max-width: 600px){
                 display: none;
             }
         }
         & .responsive-item{
             display: none;
-            @media screen and(max-width: 500px){
+            @media screen and(max-width: 600px){
                 display: flex;
             }
         }
@@ -47,4 +48,30 @@
             flex-direction: column;
         }
     }
+    & .opened-search-bar{
+        // position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid white;
+        background: black;
+        height: 25px;
+        width: 30%;
+        padding: 5px;
+        transition: 0.7s;
+        & input{
+            border: none;
+            background: black;
+            height: 25px;
+            width: 80%;
+            color: white;
+            padding: 0;
+        }
+        & input:focus{
+            border: none;
+            outline: none;
+        }
+    }
+    
 }

@@ -13,6 +13,7 @@ body {
   display: flex;
   color: #d9d9d9;
   position: relative;
+  align-items: center;
 }
 
 .nav ul {
@@ -32,7 +33,7 @@ body {
   display: flex;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .nav ul li {
     display: none;
   }
@@ -42,7 +43,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .nav ul .responsive-item {
     display: flex;
   }
@@ -69,5 +70,32 @@ body {
   color: #d9d9d9;
   display: flex;
   flex-direction: column;
+}
+
+.nav .opened-search-bar {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid white;
+  background: black;
+  height: 25px;
+  width: 30%;
+  padding: 5px;
+  transition: 0.7s;
+}
+
+.nav .opened-search-bar input {
+  border: none;
+  background: black;
+  height: 25px;
+  width: 80%;
+  color: white;
+  padding: 0;
+}
+
+.nav .opened-search-bar input:focus {
+  border: none;
+  outline: none;
 }
 /*# sourceMappingURL=index.css.map */
