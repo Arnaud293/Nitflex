@@ -1,0 +1,19 @@
+.header{
+    height: 100vh;
+}
+
+.banner-infos-container{
+    width: 40%;
+    color: white;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-ten-container{
+    display: flex;
+    color: white;
+    height: 25%;
+    overflow: hidden;
+}

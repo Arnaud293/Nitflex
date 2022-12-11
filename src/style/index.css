@@ -14,6 +14,8 @@ body {
   color: #d9d9d9;
   position: relative;
   align-items: center;
+  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.305);
 }
 
 .nav ul {
@@ -97,5 +99,64 @@ body {
 .nav .opened-search-bar input:focus {
   border: none;
   outline: none;
+}
+
+.header {
+  height: 100vh;
+}
+
+.banner-infos-container {
+  width: 40%;
+  color: white;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top-ten-container {
+  display: flex;
+  color: white;
+  height: 25%;
+  overflow: hidden;
+}
+
+.top-ten-card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.top-ten-card span {
+  height: 100%;
+  width: 120px;
+}
+
+.top-ten-card img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.play-btn {
+  background: white;
+  color: black;
+  height: 45px;
+  width: 130px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.infos-btn {
+  background: rgba(126, 108, 108, 0.519);
+  color: white;
+  height: 45px;
+  width: 180px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,14 @@
+.top-ten-card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    & span{
+        height: 100%;
+        width: 120px;
+    }
+    & img{
+        height: 100%;
+        width: 120px;
+        object-fit: cover;
+    }
+}
