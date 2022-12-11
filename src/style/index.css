@@ -1,1 +1,73 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+html, body, ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+body {
+  background: #2d2d2c;
+}
+
+.nav {
+  display: flex;
+  color: #d9d9d9;
+  position: relative;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.5rem;
+  width: 85%;
+}
+
+.nav ul img {
+  height: 45px;
+  margin-right: 1rem;
+}
+
+.nav ul li {
+  display: flex;
+}
+
+@media screen and (max-width: 500px) {
+  .nav ul li {
+    display: none;
+  }
+}
+
+.nav ul .responsive-item {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .nav ul .responsive-item {
+    display: flex;
+  }
+}
+
+.nav i {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.nav .responsive-list {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.474);
+  top: 5rem;
+  left: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav .responsive-list-item {
+  color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+}
+/*# sourceMappingURL=index.css.map */
