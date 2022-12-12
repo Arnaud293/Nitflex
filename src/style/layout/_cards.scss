@@ -4,11 +4,15 @@
     display: flex;
     // position: relative;
     overflow-x: visible;
+    cursor: pointer;
     & img{
         height: 96%;
         // width: 150px;
         border-radius: 5px;
         object-fit: cover;
         aspect-ratio: 16/9;
+    }
+    &:hover{
+        transform: scale(1.2);
     }
 }

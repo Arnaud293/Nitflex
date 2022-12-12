@@ -132,6 +132,7 @@ body {
   color: white;
   height: 150px;
   overflow-x: scroll;
+  overflow-y: hidden;
   position: relative;
   gap: 1rem;
   padding: 3rem;
@@ -144,7 +145,7 @@ body {
 }
 
 .top-ten-container::-webkit-scrollbar {
-  padding: 1px;
+  padding: 15px;
   height: 10px;
 }
 
@@ -165,6 +166,7 @@ body {
   width: 100%;
   display: flex;
   overflow-x: visible;
+  cursor: pointer;
 }
 
 .top-ten-card img {
@@ -172,6 +174,10 @@ body {
   border-radius: 5px;
   object-fit: cover;
   aspect-ratio: 16/9;
+}
+
+.top-ten-card:hover {
+  transform: scale(1.2);
 }
 
 .play-btn {
