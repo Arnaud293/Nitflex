@@ -5,6 +5,7 @@ import TopTenTrendings from './TopTenTrendings';
 
 const Row = ({fetchUrl, title}) => {
     const [programs, setPrograms] = useState([]);
+    console.log(title);
 
     useEffect(() => {
         const getData = async () => {
@@ -20,7 +21,7 @@ const Row = ({fetchUrl, title}) => {
         <div className="top-ten-container">
             <h2>{title}</h2>
             {
-            title === "Top 10 movies and TV show"? (
+            title === "Top 10 movies and TV shows :" ? (
             programs
             .sort((a,b) => b.vote_average - a.vote_average)
             .slice(0,10)
