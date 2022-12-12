@@ -1,10 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import ProgramsCard from './ProgramsCard';
-import TopTenTrendings from './TopTenTrendings';
 
 const Row = ({fetchUrl, title}) => {
     const [programs, setPrograms] = useState([]);
+    const [popup, setPopup] = useState(false);
     console.log(title);
 
     useEffect(() => {
@@ -26,11 +25,15 @@ const Row = ({fetchUrl, title}) => {
             .sort((a,b) => b.vote_average - a.vote_average)
             .slice(0,10)
             .map((program, index) => (
-                <TopTenTrendings trending={program} key={program.id} index={index}/>
+                <div className='top-ten-card'>
+                    <img src={`https://image.tmdb.org/t/p/original/${program.backdrop_path}`} alt={program?.title || program?.original_title} />
+                </div>
             ))
             ) :(
                 programs.map((program, index) => (
-                    <ProgramsCard program={program} key={program.id} index={index}/>
+                    <div className='top-ten-card'>
+                        <img src={`https://image.tmdb.org/t/p/original/${program.backdrop_path}`} alt={program?.title || program?.original_title} />
+                    </div>
                 )) 
             )}
         </div>
