@@ -8,6 +8,11 @@ const Nav = () => {
     const [toggleResponsiveNav, setToggleResponsiveNav] = useState(false);
     const [largeur, setLargeur] = useState(window.innerWidth);
     const [searchBar, setSearchBar] = useState(false);
+    const [blackNavBar, setBlackNavBar] = useState(false);
+
+    const navColorTransition = () => {
+        window.scrollY >= 50 ? setBlackNavBar(true) : setBlackNavBar(false);
+    }
 
     useEffect(() => {
 
@@ -20,15 +25,16 @@ const Nav = () => {
         }
 
         window.addEventListener('resize', changeWidth);
+        window.addEventListener('scroll', navColorTransition);
 
         // cleanup
         return () => {
             window.removeEventListener('resize', changeWidth);
         }
-    },[])
+    },[]);
 
     return (
-        <div className="nav">
+        <div className={`nav ${blackNavBar && "nav-black"}`}>
             <ul>
                 <img src={Logo} alt='company-logo'/>
                 <li>Accueil</li>
