@@ -163,7 +163,7 @@ body {
 
 .top-ten-card img {
   height: 96%;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px;
   object-fit: cover;
   aspect-ratio: 16/9;
 }
