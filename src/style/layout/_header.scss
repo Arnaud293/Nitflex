@@ -1,5 +1,6 @@
 .header{
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .banner-infos-container{
@@ -20,15 +21,30 @@
 .top-ten-container{
     display: flex;
     color: white;
-    height: 29%;
-    overflow: hidden;
+    height: 150px;
+    overflow-x: scroll;
     position: relative;
-    padding: 2rem;
-    background: linear-gradient(0deg, rgba(0,0,0,0.5587185557816876) 0%, rgba(255,255,255,0) 100%);
     gap: 1rem;
+    padding: 3rem;
+    padding-bottom: 0;
 
     & h2{
         position: absolute;
-        top: -1rem;
+        top: 0;
     }
+    &::-webkit-scrollbar {
+        padding: 1px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $background;
+        margin-left: 3rem;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: black;
+        border-radius: 8px;
+        height: 8px;
+        background-clip: content-box;
+    }
+ 
 }
