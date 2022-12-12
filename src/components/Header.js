@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Nav from './Nav';
 import requests from '../config/Req';
 import axios from 'axios';
-import TopTenTrendings from './TopTenTrendings';
 
 const Header = () => {
 
     const [movie, setMovie] = useState([]);
-    const [trendings, setTrendings] = useState([]);
 
     useEffect(() => {
         const getData = async () => {
@@ -18,14 +16,9 @@ const Header = () => {
                     Math.floor(Math.random() * request.data.results.length - 1)
                 ]
             )
-            setTrendings(
-                request.data.results
-            )
         }
         getData();
     }, []);
-    console.log(movie)
-    console.log(trendings);
 
     const background = {
         backgroundImage : `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`,
@@ -44,15 +37,7 @@ const Header = () => {
                     <button className='infos-btn'><i className="fa-solid fa-circle-info"></i>&nbsp;Plus d'infos</button>
                 </div>
             </div>
-            <div className="top-ten-container">
-                <h2>Top 10 movies and TV Show :</h2>
-                {trendings
-                .sort((a,b) => b.vote_average - a.vote_average)
-                .slice(0,10)
-                .map((trending, index) => (
-                    <TopTenTrendings trending={trending} key={trending.id} index={index} />
-                ))}
-            </div>
+           
         </div>
     );
 };
