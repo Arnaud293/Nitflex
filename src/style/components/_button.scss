@@ -21,6 +21,10 @@
     border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
+    &:hover{
+        filter: brightness(0.5);
+        cursor: pointer;
+    }
 }
 .circle-btn{
     background: rgba(126, 108, 108, 0.519);
