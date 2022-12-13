@@ -99,6 +99,10 @@
         &-main{
             margin-left: 8%;
             color: white;
+            & p{
+                max-width: 90%;
+                overflow: ellipsis;
+            }
         }
     }
     &-right{
