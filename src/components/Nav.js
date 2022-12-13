@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 // SRC
 import Logo from '../assets/img/logoNit.png';
@@ -36,11 +37,21 @@ const Nav = () => {
     return (
         <div className={`nav ${blackNavBar && "nav-black"}`}>
             <ul>
-                <img src={Logo} alt='company-logo'/>
-                <li>Accueil</li>
-                <li>Films</li>
-                <li>Séries</li>
-                <li>Ma liste</li>
+                <NavLink to='/'>
+                    <img src={Logo} alt='company-logo'/>
+                </NavLink>
+                <NavLink to='/'>
+                    <li>Accueil</li>
+                </NavLink>
+                <NavLink to='/movies'>
+                    <li>Films</li>
+                </NavLink>
+                <NavLink>
+                    <li>Séries</li>
+                </NavLink>
+                <NavLink>
+                    <li>Ma liste</li>
+                </NavLink>
                 <li className='responsive-item' onClick={() => setToggleResponsiveNav(!toggleResponsiveNav)}>
                     Pacourir&nbsp;<i className="fa-sharp fa-solid fa-caret-down"></i>
                 </li>
