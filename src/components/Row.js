@@ -21,8 +21,6 @@ const Row = ({fetchUrl, title}) => {
 
     const handlePopUp = (e) => {
         popup ? setPopup(false) : setPopup(true);
-        // console.log(e.target.src)
-        // console.log(e.target.src.split('https://image.tmdb.org/t/p/original/').join(""))
         const result = programs.filter(movie => movie.backdrop_path === e.target.src.split('https://image.tmdb.org/t/p/original/').join(""));
         console.log(result);
         setPopupData(result);
@@ -50,7 +48,7 @@ const Row = ({fetchUrl, title}) => {
             ))
             ) :(
                 programs.map((program, index) => (
-                    <div className='top-ten-card' key={index}>
+                    <div className='top-ten-card' key={index} onClick={(e) => handlePopUp(e)}>
                         <img src={`https://image.tmdb.org/t/p/original/${program.backdrop_path}`} alt={program?.title || program?.original_title} />
                     </div>
                 )) 
