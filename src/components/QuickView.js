@@ -111,7 +111,7 @@ const QuickView = ({program, setPopup}) => {
                     <div className="quick-view-infos-left">
                         <div className="quick-view-infos-left-head"> 
                             <p>{program.release_date?.split('').splice(0,4) || program.first_air_date?.split('').splice(0,4)}</p>
-                            <p className='media-type'>{program.media_type}</p>
+                            {program.media_type && <p className='media-type'>{program.media_type}</p>}
                             <p>{program.vote_average.toFixed(1)}⭐</p>
                         </div>
                         <div className="quick-view-infos-left-main">
