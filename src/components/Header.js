@@ -2,10 +2,16 @@ import React, { useEffect, useRef, useState } from 'react';
 import Nav from './Nav';
 import requests from '../config/Req';
 import axios from 'axios';
+import QuickView from './QuickView';
 
 const Header = () => {
 
     const [movie, setMovie] = useState([]);
+    const [popup, setPopup] = useState(false);
+
+    const handleBannerPopUp = () => {
+        popup ? setPopup(false) : setPopup(true);
+    }
 
     useEffect(() => {
         const getData = async () => {
@@ -34,8 +40,9 @@ const Header = () => {
                 <p>{movie?.overview}</p>
                 <div className="btn-container">
                     <button className='play-btn'><i className="fa-solid fa-play"></i>&nbsp;Lecture</button>
-                    <button className='infos-btn'><i className="fa-solid fa-circle-info"></i>&nbsp;Plus d'infos</button>
+                    <button className='infos-btn' onClick={() => handleBannerPopUp()}><i className="fa-solid fa-circle-info"></i>&nbsp;Plus d'infos</button>
                 </div>
+                {popup && <QuickView program={movie} setPopup={setPopup}/>}
             </div>
            
         </div>
