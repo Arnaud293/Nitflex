@@ -11,4 +11,11 @@ html, body, ul{
 body{
     background: $background;
 }
+a{
+    text-decoration: none;
+    color: $font1;
+}
+a.active{
+    color: red;
+}
 
