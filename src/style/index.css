@@ -188,6 +188,7 @@ body {
   position: fixed;
   top: 100px;
   z-index: 6;
+  backdrop-filter: blur(5px);
 }
 
 .quick-view-container {
@@ -209,6 +210,33 @@ body {
 
 .quick-view-container-img h1, .quick-view-container-img .quick-view-btn {
   position: absolute;
+  left: 5%;
+}
+
+.quick-view-container-img h1 {
+  top: 50%;
+  color: white;
+}
+
+.quick-view-container-img .quick-view-btn {
+  top: 70%;
+  display: flex;
+  gap: 1rem;
+}
+
+.quick-view-container-img i.fa-solid.fa-xmark {
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .play-btn {
@@ -231,5 +259,15 @@ body {
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
+}
+
+.circle-btn {
+  background: rgba(126, 108, 108, 0.519);
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9;
+  color: white;
+  font-size: 25px;
 }
 /*# sourceMappingURL=index.css.map */

@@ -30,7 +30,7 @@ const Row = ({fetchUrl, title}) => {
 
     return (
         <>
-        {popup && <QuickView program={popupData[0]}/>}
+        {popup && <QuickView program={popupData[0]} setPopup={setPopup}/>}
                 
         <div className="top-ten-container">
             <h2>{title}</h2>
