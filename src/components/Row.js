@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import QuickView from './QuickView';
 
+
 const Row = ({fetchUrl, title}) => {
     const [programs, setPrograms] = useState([]);
     const [popup, setPopup] = useState(false);
@@ -13,7 +14,7 @@ const Row = ({fetchUrl, title}) => {
             const request = await axios.get(fetchUrl)
             
             setPrograms(
-                request.data.results
+                request.data.results.filter(el => el.backdrop_path !== null)
             )
         }
         getData();
@@ -40,8 +41,9 @@ const Row = ({fetchUrl, title}) => {
             .map((program, index) => (
                 
                 <div className='top-ten-card' key={program.id} onClick={(e) => handlePopUp(e)}>
-                    <img src={`https://image.tmdb.org/t/p/original/${program.backdrop_path}`} alt={program?.title || program?.original_title} />
-                    
+                    <img 
+                    src={`https://image.tmdb.org/t/p/original/${program.backdrop_path}`}
+                    alt={program?.title || program?.original_title} />
                 </div>
               
                 
