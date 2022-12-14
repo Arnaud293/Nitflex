@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 // SRC
 import Logo from '../assets/img/logoNit.png';
+import ProfilMin from '../assets/img/miniature.png'
 
 const Nav = () => {
 
@@ -46,10 +47,10 @@ const Nav = () => {
                 <NavLink to='/movies'>
                     <li>Films</li>
                 </NavLink>
-                <NavLink>
+                <NavLink to='/tvshows'>
                     <li>Séries</li>
                 </NavLink>
-                <NavLink>
+                <NavLink to='/favorites'>
                     <li>Ma liste</li>
                 </NavLink>
                 <li className='responsive-item' onClick={() => setToggleResponsiveNav(!toggleResponsiveNav)}>
@@ -72,6 +73,7 @@ const Nav = () => {
                     <i className="fa-solid fa-magnifying-glass" onClick={() => setSearchBar(!searchBar)}></i>
                 </div>
             )}
+            <img src={ProfilMin} alt="" />
         </div>
     );
 };

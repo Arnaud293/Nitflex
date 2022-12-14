@@ -25,14 +25,13 @@ a.active {
   width: 100%;
   align-items: center;
   backdrop-filter: blur(1px);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.558719) 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5587185558) 100%);
   z-index: 5;
+  top: 0;
 }
-
 .nav-black {
   background: black;
 }
-
 .nav ul {
   display: flex;
   align-items: center;
@@ -40,38 +39,31 @@ a.active {
   gap: 1.5rem;
   width: 85%;
 }
-
 .nav ul img {
   height: 45px;
   margin-right: 1rem;
 }
-
 .nav ul li {
   display: flex;
 }
-
 @media screen and (max-width: 600px) {
   .nav ul li {
     display: none;
   }
 }
-
 .nav ul .responsive-item {
   display: none;
 }
-
 @media screen and (max-width: 600px) {
   .nav ul .responsive-item {
     display: flex;
   }
 }
-
 .nav i {
   display: flex;
   align-items: center;
   font-size: 20px;
 }
-
 .nav .responsive-list {
   position: absolute;
   width: 250px;
@@ -82,13 +74,11 @@ a.active {
   display: flex;
   flex-direction: column;
 }
-
 .nav .responsive-list-item {
   color: #d9d9d9;
   display: flex;
   flex-direction: column;
 }
-
 .nav .opened-search-bar {
   display: flex;
   flex-direction: row-reverse;
@@ -101,7 +91,6 @@ a.active {
   padding: 5px;
   transition: 0.7s;
 }
-
 .nav .opened-search-bar input {
   border: none;
   background: black;
@@ -110,10 +99,14 @@ a.active {
   color: white;
   padding: 0;
 }
-
 .nav .opened-search-bar input:focus {
   border: none;
   outline: none;
+}
+.nav img {
+  height: 30px;
+  margin-left: 1rem;
+  border-radius: 5px;
 }
 
 .header {
@@ -130,7 +123,6 @@ a.active {
   justify-content: center;
   padding: 3rem;
 }
-
 .banner-infos-container .btn-container {
   display: flex;
   gap: 1rem;
@@ -147,22 +139,18 @@ a.active {
   padding: 3rem;
   padding-bottom: 0;
 }
-
 .top-ten-container h2 {
   position: absolute;
   top: -10px;
 }
-
 .top-ten-container::-webkit-scrollbar {
   padding: 15px;
   height: 10px;
 }
-
 .top-ten-container::-webkit-scrollbar-track {
   background: #181818;
   margin-left: 3rem;
 }
-
 .top-ten-container::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 8px;
@@ -177,14 +165,12 @@ a.active {
   overflow-x: visible;
   cursor: pointer;
 }
-
 .top-ten-card img {
   height: 96%;
   border-radius: 5px;
   object-fit: cover;
   aspect-ratio: 16/9;
 }
-
 .top-ten-card:hover {
   transform: scale(1.2);
 }
@@ -199,46 +185,38 @@ a.active {
   z-index: 6;
   backdrop-filter: blur(5px);
 }
-
 .quick-view-container {
   width: 80vw;
   height: 80vh;
   background: #181818;
 }
-
 .quick-view-container-infos {
   height: 40%;
   display: grid;
   grid-template-columns: 60% 40%;
 }
-
 .quick-view-container-img {
   height: 60%;
   position: relative;
 }
-
 .quick-view-container-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .quick-view-container-img h1, .quick-view-container-img .quick-view-btn {
   position: absolute;
   left: 5%;
 }
-
 .quick-view-container-img h1 {
   top: 50%;
   color: white;
 }
-
 .quick-view-container-img .quick-view-btn {
   top: 70%;
   display: flex;
   gap: 1rem;
 }
-
 .quick-view-container-img i.fa-solid.fa-xmark {
   color: white;
   border: 2px solid white;
@@ -253,17 +231,14 @@ a.active {
   right: 10px;
   top: 10px;
 }
-
 .quick-view-container-img i.fa-solid.fa-xmark:hover {
   filter: brightness(0.5);
   cursor: pointer;
 }
-
 .quick-view-infos-left {
   display: flex;
   flex-direction: column;
 }
-
 .quick-view-infos-left-head {
   display: flex;
   color: white;
@@ -273,54 +248,44 @@ a.active {
   align-items: center;
   margin-left: 8%;
 }
-
 .quick-view-infos-left-head .media-type {
   border: 1px solid white;
   padding: 5px;
 }
-
 .quick-view-infos-left-main {
   margin-left: 8%;
   color: white;
 }
-
 .quick-view-infos-left-main p {
   max-width: 90%;
   overflow: ellipsis;
 }
-
 .quick-view-right p {
-  color: #6b6b6b;
+  color: rgb(107, 107, 107);
   font-weight: bold;
 }
-
 .quick-view-right p i {
   font-size: 25px;
 }
-
 .quick-view-right p .fa-sharp.fa-solid.fa-xmark {
   color: red;
 }
-
 .quick-view-right p .fa-sharp.fa-solid.fa-check {
   color: green;
 }
-
 .quick-view-right-genre {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
 .quick-view-right-genre ul {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
-
 .quick-view-right-genre ul li {
   color: white;
-  border: 1px solid #6a6a6a;
+  border: 1px solid rgb(106, 106, 106);
   padding: 3px;
 }
 
@@ -331,14 +296,12 @@ a.active {
   min-height: 25vh;
   margin-top: 5rem;
 }
-
 .footer-content {
   width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-
 .footer-content p {
   color: grey;
   border: 1px solid grey;
@@ -347,27 +310,23 @@ a.active {
   font-size: 13px;
   margin-top: 1.5rem;
 }
-
 .footer-content span {
   color: grey;
   font-size: 7px;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
-
 .footer-top {
   color: white;
   font-size: 25px;
   display: flex;
   gap: 2rem;
 }
-
 .footer-list {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   margin-top: 1.5rem;
 }
-
 .footer-list ul {
   color: grey;
   display: flex;
@@ -375,11 +334,9 @@ a.active {
   gap: 1rem;
   font-size: 13px;
 }
-
 .footer-list ul li {
   width: fit-content;
 }
-
 .footer-list ul li:hover {
   border-bottom: 1px solid grey;
   cursor: pointer;
@@ -395,7 +352,6 @@ a.active {
   font-size: 20px;
   font-weight: bold;
 }
-
 .play-btn:hover {
   filter: brightness(0.5);
   cursor: pointer;
@@ -411,7 +367,6 @@ a.active {
   font-size: 20px;
   font-weight: bold;
 }
-
 .infos-btn:hover {
   filter: brightness(0.5);
   cursor: pointer;
@@ -426,9 +381,7 @@ a.active {
   color: white;
   font-size: 25px;
 }
-
 .circle-btn:hover {
   filter: brightness(0.5);
   cursor: pointer;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
