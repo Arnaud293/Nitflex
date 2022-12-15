@@ -24,6 +24,7 @@ a.active {
   position: fixed;
   width: 100%;
   align-items: center;
+  justify-content: space-around;
   backdrop-filter: blur(1px);
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5587185558) 100%);
   z-index: 5;
@@ -104,8 +105,7 @@ a.active {
   outline: none;
 }
 .nav img {
-  height: 30px;
-  margin-left: 1rem;
+  height: 40px;
   border-radius: 5px;
 }
 
