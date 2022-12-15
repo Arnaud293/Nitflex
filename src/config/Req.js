@@ -16,6 +16,8 @@ const requests = {
     // Gender
     getMoviesList : `${BASE_URL}/genre/movie/list?api_key=${API_KEY}`,
     getTvShowList : `${BASE_URL}/genre/tv/list?api_key=${API_KEY}`,
+    // MultiSearch
+    getMultiSearchList : `${BASE_URL}/search/multi?api_key=${API_KEY}`,
 }
 
 export default requests;
