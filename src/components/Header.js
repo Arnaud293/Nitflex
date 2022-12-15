@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Nav from './Nav';
 import requests from '../config/Req';
 import axios from 'axios';
 import QuickView from './QuickView';
@@ -34,7 +33,7 @@ const Header = () => {
 
     return (
         <div className='header' style={background}>
-            <Nav />
+
             <div className="banner-infos-container">
                 <h1>{movie?.original_title || movie?.title}</h1>
                 <p>{movie?.overview}</p>

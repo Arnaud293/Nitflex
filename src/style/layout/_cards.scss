@@ -81,6 +81,23 @@
     &-infos-left{
         display: flex;
         flex-direction: column;
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: visible;
+        &::-webkit-scrollbar {
+            padding: 15px;
+            height: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background: $background;
+            margin-left: 3rem;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: black;
+            border-radius: 8px;
+            height: 8px;
+            background-clip: content-box;
+        }
         &-head{
             display: flex;
             color: white;
@@ -109,6 +126,9 @@
         & p{
             color: rgb(107, 107, 107);
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
             & i{
                 font-size: 25px;
             }
