@@ -1,0 +1,24 @@
+.search-result{
+    display: flex;
+    height: auto;
+    margin-top: 15vh;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    &-card{
+        width: 200px;
+        height: 300px;
+
+        & img{
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            &:hover{
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+    }
+}
