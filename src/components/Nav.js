@@ -7,13 +7,13 @@ import Logo from '../assets/img/logoNit.png';
 import ProfilMin from '../assets/img/miniature.png'
 import requests from '../config/Req';
 
-const Nav = () => {
+const Nav = ({result, setResult}) => {
 
     const [toggleResponsiveNav, setToggleResponsiveNav] = useState(false);
     const [largeur, setLargeur] = useState(window.innerWidth);
     const [searchBar, setSearchBar] = useState(false);
     const [blackNavBar, setBlackNavBar] = useState(false);
-    const [getSearchResult, setGetSearchResult] = useState('');
+    
 
     const navColorTransition = () => {
         window.scrollY >= 50 ? setBlackNavBar(true) : setBlackNavBar(false);
@@ -21,9 +21,9 @@ const Nav = () => {
 
     const getSearchedData = async (e) => {
         axios.get(requests.getMultiSearchList + `&query=?${e.target.value}&language=en-EN`)
-        .then((res) => setGetSearchResult(res.data.results
+        .then((res) => setResult(res.data.results
             .filter(el => el.media_type == "movie" && el.backdrop_path !== null|| el.media_type == "tv" && el.backdrop_path !== null)));
-        console.log(getSearchResult);
+        console.log(result);
             
     };
 
