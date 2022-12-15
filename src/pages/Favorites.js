@@ -5,8 +5,7 @@ import Nav from '../components/Nav';
 const Favorites = () => {
     return (
         <div>
-            <Nav />
-            <Footer />
+
         </div>
     );
 };
