@@ -124,7 +124,7 @@ const QuickView = ({program, setPopup}) => {
                             <p>Genres :</p>
                             <ul>{program.genre_ids ? findGenre() : "No genre found for this program"}</ul>
                         </div>
-                        <p>Suitable for children : {program.adult ? <i class="fa-sharp fa-solid fa-xmark"></i> : <i class="fa-sharp fa-solid fa-check"></i>}</p>
+                        <p>For adults : {program.adult ? <i class="fa-sharp fa-solid fa-check"></i> : <i class="fa-sharp fa-solid fa-xmark"></i>}</p>
                     </div>
                 </div>
 
