@@ -48,23 +48,31 @@ const Favorites = () => {
             <div className="favorites-movies">
                 <h2>My favorites movies :</h2>
                 <div className="favorites-cards-container">
-                {favoritesMovies.map((movie) => (
+                {favoritesMovies.length ? (
+                favoritesMovies.map((movie) => (
                     <div className='favorites-card' key={movie.id}>
                         <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} />
                         <i className="fa-solid fa-trash" onClick={() => handleDeleteFavoritesMovies()}></i> 
                     </div>
-                ))}
+                ))
+                ):(
+                   <p>No favorites movies 🤔</p> 
+                )}
                 </div>
             </div>
             <div className="favorites-tv">
                 <h2>My favorites tv shows :</h2>
                 <div className="favorites-cards-container">
-                {favoritesTv.map((tv) => (
+                {favoritesTv.length ? (
+                favoritesTv.map((tv) => (
                     <div className='favorites-card' key={tv.id} >
                         <img src={`https://image.tmdb.org/t/p/original/${tv.backdrop_path}`} />
                         <i className="fa-solid fa-trash" onClick={() => handleDeleteFavoritesTv()}></i>
                     </div>
-                ))}
+                )))
+            :(
+                <p>No favorites tv shows 🤔</p> 
+            )}
                 </div>
             </div>
         </div>
