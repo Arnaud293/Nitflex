@@ -17,7 +17,7 @@ const Header = () => {
             const request = await axios.get(requests.getTrending)
             
             setMovie(
-                request.data.results[
+                request.data.results.filter(el => el.backdrop_path !== null)[
                     Math.floor(Math.random() * request.data.results.length - 1)
                 ]
             )
