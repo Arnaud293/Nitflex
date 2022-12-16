@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const QuickView = ({program, setPopup}) => {
 
@@ -92,7 +92,25 @@ const QuickView = ({program, setPopup}) => {
         }
         return genreArr.map((genre) => <li>{genre}</li>);
     }
+    // Add to favorites
+    const handleFavorites = (e) =>{
+        e.preventDefault();
 
+        let favStoreMovies = window.localStorage.movies ? window.localStorage.movies.split(',') : [];
+        let favStoreTv = window.localStorage.tv ? window.localStorage.tv.split(',') : [];
+
+        if(!favStoreMovies.includes(program.id.toString()) && program.release_date)
+        {
+            favStoreMovies.push(program.id);
+            window.localStorage.movies = favStoreMovies;
+            alert(`${program.title} is now added to your favorites !`)
+        } else if(!favStoreTv.includes(program.id.toString()) && program.first_air_date){
+            favStoreTv.push(program.id);
+            window.localStorage.tv = favStoreTv;
+            alert(`${program.name} is now added to your favorites !`)
+        }
+    }
+   
 
     return (
         <div className='quick-view'>
@@ -103,7 +121,8 @@ const QuickView = ({program, setPopup}) => {
                     <h1>{program.title}</h1>
                     <div className="quick-view-btn">
                         <button className='play-btn'><i className="fa-solid fa-play"></i>&nbsp;Lecture</button>
-                        <button className='circle-btn'><i className="fa-solid fa-plus"></i></button>
+                        <button className='circle-btn' onClick={(e) => handleFavorites(e)}><i className="fa-solid fa-plus"></i></button>
+                        
                         <button className='circle-btn'><i className="fa-sharp fa-solid fa-thumbs-up"></i></button>
                     </div>
                 </div>
