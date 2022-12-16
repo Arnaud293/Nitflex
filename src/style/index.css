@@ -6,7 +6,7 @@ html, body, ul {
 }
 
 body {
-  background: #181818;
+  background: #161616;
 }
 
 a {
@@ -148,7 +148,7 @@ a.active {
   height: 10px;
 }
 .top-ten-container::-webkit-scrollbar-track {
-  background: #181818;
+  background: #161616;
   margin-left: 3rem;
 }
 .top-ten-container::-webkit-scrollbar-thumb {
@@ -188,7 +188,7 @@ a.active {
 .quick-view-container {
   width: 80vw;
   height: 80vh;
-  background: #181818;
+  background: #161616;
 }
 .quick-view-container-infos {
   height: 40%;
@@ -247,7 +247,7 @@ a.active {
   height: 10px;
 }
 .quick-view-infos-left::-webkit-scrollbar-track {
-  background: #181818;
+  background: #161616;
   margin-left: 3rem;
 }
 .quick-view-infos-left::-webkit-scrollbar-thumb {
@@ -383,6 +383,70 @@ a.active {
 .search-result-card img:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.favorites {
+  margin-top: 15vh;
+  margin-left: 40px;
+  color: white;
+}
+.favorites-card {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.favorites-card i.fa-solid.fa-trash {
+  display: none;
+}
+.favorites-card i.fa-solid.fa-trash:hover {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12%;
+  background: rgb(213, 9, 9);
+  border-radius: 0 0 8px 8px;
+}
+.favorites-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.favorites-card img:hover + i.fa-solid.fa-trash {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12%;
+  background: rgb(213, 9, 9);
+  border-radius: 0 0 8px 8px;
+  transition: 0.5s;
+  animation: slide-in-bottom 0.5s forwards;
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.favorites-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .play-btn {
