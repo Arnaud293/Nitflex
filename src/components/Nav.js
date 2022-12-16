@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import requests from '../config/Req';
 
 // SRC
 import Logo from '../assets/img/logoNit.png';
 import ProfilMin from '../assets/img/miniature.png'
-import requests from '../config/Req';
+import LogoMin from '../assets/img/logoMin.png';
 
 const Nav = ({result, setResult}) => {
 
@@ -51,18 +52,19 @@ const Nav = ({result, setResult}) => {
             <ul>
                 <NavLink to='/'>
                     <img src={Logo} alt='company-logo'/>
+                    <img className='logo-min' src={LogoMin} alt='company-logo'/>
                 </NavLink>
                 <NavLink to='/'>
-                    <li>Accueil</li>
+                    <li>Home</li>
                 </NavLink>
                 <NavLink to='/movies'>
-                    <li>Films</li>
+                    <li>Movies</li>
                 </NavLink>
                 <NavLink to='/tvshows'>
-                    <li>Séries</li>
+                    <li>Tv shows</li>
                 </NavLink>
                 <NavLink to='/favorites'>
-                    <li>Ma liste</li>
+                    <li>Favorites</li>
                 </NavLink>
                 <li className='responsive-item' onClick={() => setToggleResponsiveNav(!toggleResponsiveNav)}>
                     Pacourir&nbsp;<i className="fa-sharp fa-solid fa-caret-down"></i>
@@ -70,10 +72,18 @@ const Nav = ({result, setResult}) => {
             </ul>
             {toggleResponsiveNav && (
                 <ul className='responsive-list'>
-                    <li className='responsive-list-item'>Accueil</li>
-                    <li className='responsive-list-item'>Films</li>
-                    <li className='responsive-list-item'>Séries</li>
-                    <li className='responsive-list-item'>Ma liste</li>
+                    <NavLink to='/' onClick={() => setToggleResponsiveNav(false)}>
+                    <li className='responsive-list-item'>Home</li>
+                    </NavLink>
+                    <NavLink to='/movies' onClick={() => setToggleResponsiveNav(false)}>
+                    <li className='responsive-list-item'>Movies</li>
+                    </NavLink>
+                    <NavLink to='/tvshows'onClick={() => setToggleResponsiveNav(false)}>
+                    <li className='responsive-list-item'>Tv shows</li>
+                    </NavLink>
+                    <NavLink to='/favorites'onClick={() => setToggleResponsiveNav(false)}>
+                    <li className='responsive-list-item'>Favorites</li>
+                    </NavLink>
                 </ul>
             )}
             {searchBar === false ? (
