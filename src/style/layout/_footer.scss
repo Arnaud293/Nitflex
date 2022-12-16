@@ -35,6 +35,9 @@
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         margin-top: 1.5rem;
+        @media screen and(max-width: 780px){
+            grid-template-columns: 50% 50%;
+        }
         & ul{
             color: grey;
             display: flex;

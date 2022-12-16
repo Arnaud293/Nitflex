@@ -36,6 +36,9 @@
             height: 40%;
             display: grid;
             grid-template-columns: 60% 40%;
+            @media screen and(max-width: 900px){
+                grid-template-columns: 1fr;
+            }
         }
         &-img{
             height: 60%;
@@ -57,6 +60,10 @@
                 top: 70%;
                 display: flex;
                 gap: 1rem;
+                @media screen and(max-width: 500px){
+                    top: 60%;
+                    flex-wrap: wrap;
+                }
             }
             & i.fa-solid.fa-xmark{
                 color: white;
@@ -123,6 +130,9 @@
         }
     }
     &-right{
+        @media screen and(max-width:900px){
+            display: none;
+        }
         & p{
             color: rgb(107, 107, 107);
             font-weight: bold;

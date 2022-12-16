@@ -3,6 +3,7 @@ html, body, ul {
   margin: 0;
   list-style: none;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,7 @@ a.active {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5587185558) 100%);
   z-index: 5;
   top: 0;
+  gap: 1rem;
 }
 .nav-black {
   background: black;
@@ -40,9 +42,27 @@ a.active {
   gap: 1.5rem;
   width: 85%;
 }
+@media screen and (max-width: 599px) {
+  .nav ul {
+    gap: 0;
+  }
+}
 .nav ul img {
   height: 45px;
   margin-right: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .nav ul img {
+    display: none;
+  }
+}
+.nav ul .logo-min {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .nav ul .logo-min {
+    display: block;
+  }
 }
 .nav ul li {
   display: flex;
@@ -67,13 +87,14 @@ a.active {
 }
 .nav .responsive-list {
   position: absolute;
-  width: 250px;
+  max-width: 250px;
   height: auto;
-  background: rgba(0, 0, 0, 0.474);
+  min-height: 120px;
+  background: rgba(0, 0, 0, 0.674);
   top: 5rem;
-  left: 3rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 .nav .responsive-list-item {
   color: #d9d9d9;
@@ -112,10 +133,12 @@ a.active {
 .header {
   height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .banner-infos-container {
-  width: 40%;
+  width: 50%;
   color: white;
   height: 60%;
   display: flex;
@@ -126,6 +149,7 @@ a.active {
 .banner-infos-container .btn-container {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .top-ten-container {
@@ -139,9 +163,26 @@ a.active {
   padding: 3rem;
   padding-bottom: 0;
 }
+@media screen and (max-width: 780px) {
+  .top-ten-container {
+    height: 200px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .top-ten-container {
+    padding-left: 0.5rem;
+  }
+}
 .top-ten-container h2 {
   position: absolute;
   top: -10px;
+}
+@media screen and (max-width: 600px) {
+  .top-ten-container h2 {
+    top: 0;
+    font-size: 16px;
+  }
 }
 .top-ten-container::-webkit-scrollbar {
   padding: 15px;
@@ -150,6 +191,11 @@ a.active {
 .top-ten-container::-webkit-scrollbar-track {
   background: #161616;
   margin-left: 3rem;
+}
+@media screen and (max-width: 600px) {
+  .top-ten-container::-webkit-scrollbar-track {
+    margin-left: 0.5rem;
+  }
 }
 .top-ten-container::-webkit-scrollbar-thumb {
   background: black;
@@ -195,6 +241,11 @@ a.active {
   display: grid;
   grid-template-columns: 60% 40%;
 }
+@media screen and (max-width: 900px) {
+  .quick-view-container-infos {
+    grid-template-columns: 1fr;
+  }
+}
 .quick-view-container-img {
   height: 60%;
   position: relative;
@@ -216,6 +267,12 @@ a.active {
   top: 70%;
   display: flex;
   gap: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .quick-view-container-img .quick-view-btn {
+    top: 60%;
+    flex-wrap: wrap;
+  }
 }
 .quick-view-container-img i.fa-solid.fa-xmark {
   color: white;
@@ -276,6 +333,11 @@ a.active {
 .quick-view-infos-left-main p {
   max-width: 90%;
   overflow: ellipsis;
+}
+@media screen and (max-width: 900px) {
+  .quick-view-right {
+    display: none;
+  }
 }
 .quick-view-right p {
   color: rgb(107, 107, 107);
@@ -346,6 +408,11 @@ a.active {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   margin-top: 1.5rem;
+}
+@media screen and (max-width: 780px) {
+  .footer-list {
+    grid-template-columns: 50% 50%;
+  }
 }
 .footer-list ul {
   color: grey;
@@ -454,6 +521,7 @@ a.active {
   color: black;
   height: 55px;
   width: 170px;
+  min-width: 140px;
   border: none;
   border-radius: 5px;
   font-size: 20px;
@@ -469,6 +537,7 @@ a.active {
   color: white;
   height: 55px;
   width: 220px;
+  min-width: 140px;
   border: none;
   border-radius: 5px;
   font-size: 20px;
