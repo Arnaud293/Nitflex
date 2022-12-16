@@ -26,8 +26,23 @@ const Favorites = () => {
             .then(() => setFavoritesTv(tvArr));    
         }
     },[])
-    console.log(favoritesMovies)
-    console.log(favoritesTv)
+    // Delete from favorites
+     const handleDeleteFavoritesMovies = () => {
+        let storedData = window.localStorage.movies.split(',');
+        for(let i = 0; i< storedData.length; i++){
+            let newData = storedData.filter((id) => id != favoritesMovies[i].id );
+            window.localStorage.movies= newData;
+            window.location.reload();
+        }
+    }
+    const handleDeleteFavoritesTv = () => {
+        let storedData = window.localStorage.tv.split(',');
+        for(let i = 0; i< storedData.length; i++){
+        let newData = storedData.filter((id) => id != favoritesTv[i].id );
+        window.localStorage.tv= newData;
+        window.location.reload();
+        }
+    }
     return (
         <div className='favorites'>
             <div className="favorites-movies">
@@ -36,6 +51,7 @@ const Favorites = () => {
                 {favoritesMovies.map((movie) => (
                     <div className='favorites-card' key={movie.id}>
                         <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} />
+                        <i className="fa-solid fa-trash" onClick={() => handleDeleteFavoritesMovies()}></i> 
                     </div>
                 ))}
                 </div>
@@ -44,8 +60,9 @@ const Favorites = () => {
                 <h2>My favorites tv shows :</h2>
                 <div className="favorites-cards-container">
                 {favoritesTv.map((tv) => (
-                    <div className='favorites-card' key={tv.id}>
+                    <div className='favorites-card' key={tv.id} >
                         <img src={`https://image.tmdb.org/t/p/original/${tv.backdrop_path}`} />
+                        <i className="fa-solid fa-trash" onClick={() => handleDeleteFavoritesTv()}></i>
                     </div>
                 ))}
                 </div>
