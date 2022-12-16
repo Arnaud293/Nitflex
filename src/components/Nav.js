@@ -94,7 +94,7 @@ const Nav = ({result, setResult}) => {
                     <i className="fa-solid fa-magnifying-glass" onClick={() => setSearchBar(!searchBar)}></i>
                 </div>
             )}
-            <i class="fa-regular fa-bell"></i>
+            <i className="fa-regular fa-bell"></i>
             <img src={ProfilMin} alt="" />
         </div>
     );
