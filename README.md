@@ -69,7 +69,7 @@
         </tr>
          <tr>
             <td>Movies</td>
-            <td>Similar to the homepage but with queries only related to movies /TvShows</td>
+            <td>Similar to the homepage but with queries only related to movies</td>
         </tr>
          <tr>
             <td>TvShows</td>
@@ -114,7 +114,7 @@
         </tr>
          <tr>
             <td>/src/styles</td>
-            <td>Contains all styling logic in scss, compiled to css in an index/TvShows</td>
+            <td>Contains all styling logic in scss, compiled to css in an index</td>
         </tr>
          <tr>
             <td>/src/assets</td>
