@@ -7,9 +7,12 @@
   <li>ReactJs</li>
   <li>Scss with a 7-1 pattern (almost)</li>
   <li>tmDB Api for the programs data</li>
-</uL>
+</ul>
 <h4>Deployment</h4>
 <p><em>The project has been deployed on Netlify, you can view the demo at : <a href="https://sparkling-youtiao-7bb6c8.netlify.app">Nitflex V1</a></em></p>
+
+![nitflex](https://user-images.githubusercontent.com/101059956/215831818-a2ad5406-4c8e-4b83-a339-08947655b1fd.png)
+
 
 <h2>How it works ?</h2>
 <p>Thanks to Javascript's asynchronous and also React hooks like useEffect, the application makes specific API requests to give a conditional display when it "mounts". These different requests are made according to the components or the page to display. For example, if you are on the movies page, API requests will relate to movie data. </p>
