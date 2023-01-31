@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+<h1> Nitflex ? </h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4> Nitflex is a Netflix clone UI with many features excluding streaming of course. Building by myself from scratch using the various documentations as help. </h4>
 
-## Available Scripts
+<h3>Stack and tools</h3>
+<ul>
+  <li>ReactJs</li>
+  <li>Scss with a 7-1 pattern (almost)</li>
+  <li>tmDB Api for the programs data</li>
+</uL>
+<h4>Deployment</h4>
+<p><em>The project has been deployed on Netlify, you can view the demo at : <a href="https://sparkling-youtiao-7bb6c8.netlify.app">Nitflex V1</a></em></p>
 
-In the project directory, you can run:
+<h2>How it works ?</h2>
+<p>Thanks to Javascript's asynchronous and also React hooks like useEffect, the application makes specific API requests to give a conditional display when it "mounts". These different requests are made according to the components or the page to display. For example, if you are on the movies page, API requests will relate to movie data. </p>
 
-### `npm start`
+<h5>Specific cases</h5>
+<ul>
+  <li>Home</li>
+  <li>Favorites</li>
+</ul>
+<h3>About Components</h3>
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Components</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Nav</td>
+            <td>Contain links to other pages, searchbar to fetch programs by name. This component is also responsive.</td>
+        </tr>
+         <tr>
+            <td>Header</td>
+            <td>This component fetch and render a random banner from a list of trendings movies/TvShows</td>
+        </tr>
+         <tr>
+            <td>Row</td>
+            <td>Each row map a list of particular category of fetched programs</td>
+        </tr>
+         <tr>
+            <td>QuickView</td>
+            <td>Pop up component on click to view more information about a specific program with the capability to add this one to favorites</td>
+        </tr>
+         <tr>
+            <td>SearchResult</td>
+            <td>Custom component to fetch and render custom query from the searchbar</td>
+        </tr>
+         <tr>
+            <td>Footer</td>
+            <td>Static render displaying in the whole application</td>
+        </tr>
+    </tbody>
+</table>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>About Pages</h3>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Components</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Home</td>
+            <td>This is the main page that renders a banner, as well as programs related to movies and series in rows</td>
+        </tr>
+         <tr>
+            <td>Movies</td>
+            <td>Similar to the homepage but with queries only related to movies /TvShows</td>
+        </tr>
+         <tr>
+            <td>TvShows</td>
+            <td>Similar to the homepage but with queries only related to Tv Shows</td>
+        </tr>
+         <tr>
+            <td>Favorites</td>
+            <td>This page get favorites programs ID from localstorage and make a specific request to get each programs details from the API. Each favorites program can be deleted from favorites in this page.</td>
+        </tr>
+    </tbody>
+</table>
 
-### `npm test`
+<h3>Customization</h3>
+<ul>
+  <li>Filtering data on fetch to remove programs without backdrop_path(image), in order to prevent 404 error and bad UX </li>
+  <li>Create customs css rules(breakpoints) in the base SCSS files for variables(colors, background ...) and responsive </li>
+  <li>Creation of a custom logo resembling the official logo, with a responsive variant </li>
+</ul>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>Known issues</h3>
+<ul>
+  <li>In rare cases, the banner does not display, you have to refresh the page. </li>
+  <li>For unknown reasons, potentially related to the database, a 404 error may appear for requests related to images, without disturbing the rendering </li>
+  <li>The search bar is very short in the responsive mode of the Nav </li>
+</ul>
 
-### `npm run build`
+<h3>List of possible improvements</h3>
+<ul>
+  <li>Add a lazy loader to limit unnecessary queries. </li>
+  <li>Modify components to make them more reusable (example: for the row). </li>
+  <li>Use clearer naming for component endings with .jsx </li>
+</ul>
+<h3>Specificity of folder structures</h3>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
