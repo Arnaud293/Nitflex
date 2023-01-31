@@ -59,7 +59,7 @@
 <table>
     <thead>
         <tr>
-            <th colspan="2">Components</th>
+            <th colspan="2">Pages</th>
         </tr>
     </thead>
     <tbody>
