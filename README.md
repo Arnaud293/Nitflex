@@ -95,8 +95,8 @@
 <h3>Known issues</h3>
 <ul>
   <li>❌ In rare cases, the banner does not display, you have to refresh the page. </li>
-  <li>❌ For unknown reasons, potentially related to the database, a 404 error may appear for requests related to images, without disturbing the rendering </li>
-  <li>❌ The search bar is very short in the responsive mode of the Nav </li>
+  <li>❌ For unknown reasons, potentially related to the database, a 404 error may appear for requests related to images, without disturbing the rendering. </li>
+  <li>❌ The search bar is very short in the responsive mode of the Nav. </li>
 </ul>
 
 <h3>List of possible improvements</h3>
